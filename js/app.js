@@ -97,10 +97,10 @@ function buildEmployeeModal(array) {
       </div>
     `
   modalListener(modalContainer);
+  let buttonContainer = modalContainer.querySelector('.modal .modal-btn-container');
+  modalSwitch(buttonContainer);
   modalContainer.style.display = 'none';
   body.appendChild(modalContainer);
-
-  
 }
 
 // event listeners
@@ -127,15 +127,17 @@ function modalListener(element) {
   });
 }
 
-// function modalSwitch(element) {
-//   element.addEventListener('click', (e) => {
-//     alert('test');
-//   })
-// }
+function modalSwitch(element) {
+  element.addEventListener('click', (e) => {
+    let allButtonContainers = body.querySelector('.modal-container').querySelectorAll('.modal-btn-container');
+    console.log(allButtonContainers);
+    alert('test');
+  })
+}
 
 // let modalButtonContainers = document.querySelectorAll('.modal-btn-container');
-//   modalButtonContainers.forEach(buttonContainer => {
-//     buttonContainer.addEventListener('click' (e) => {
-
-//     })
-//   })
+//   // modalButtonContainers.forEach(buttonContainer => {
+//   //   buttonContainer.addEventListener('click', (e) => {
+//   //     alert('test');
+//   //   })
+//   // })
